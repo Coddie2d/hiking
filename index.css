@@ -11292,6 +11292,7 @@ body {
 .header .header__inner {
   padding: 20px 30px;
   align-items: center;
+  justify-content: space-between;
   position: relative;
   background-color: transparent;
   display: flex;
