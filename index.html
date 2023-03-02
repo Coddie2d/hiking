@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/script/pagepilling/jquery.pagepiling.css">
+    <title>MNTN</title>
+</head>
+<body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__inner">
+                    <div class="header__logo">
+                        <a href="" class="header__nav_logo logo">MNTN</a>
+                    </div>
+                    <div class="header__nav_body">
+                        <div class="nav_body__center">
+                            <a class="header__nav_link gilroy" href="">Equipment</a>
+                            <a class="header__nav_link gilroy" href="">About us</a>
+                            <a class="header__nav_link gilroy" href="">Blog</a>
+                        </div>
+                        <div class="header__right">
+                            <a class="header__nav_link gilroy" ><i class="fa-regular fa-circle-user"></i> Account</a>
+                        </div>
+                    </div>
+
+                    <span class="burger_menu">
+                        <span></span>
+                    </span>
+                </div>
+            </header>
+
+            <aside class="socials">
+                <p class="socials__text gilroy">Follow us</p>
+                <a href="" class="link icon__sidebar"> <i class="fa-brands fa-instagram"></i>  </a>
+                <a href="" class="link icon__sidebar"> <i class="fa-brands fa-twitter"> </i> </a>
+            </aside>
+
+            <main class="main">
+                <div id="pagepiling">
+                    <div class="section start" id="page1">
+                        <div class="start__section_wrapper">
+                            <p class="first_title start__first_title">A Hiking guide</p>
+                            <h1 class="second_title start__second_title">Be prepared for the Mountains and beyond!</h1>
+                            <a href="" class="scroll_down link">scroll down <i class="fa-solid fa-arrow-down-long"></i>  </a>   
+                        </div> 
+                    </div>
+                    <div class="section level_of_hiker" id="page2">
+                        <div class="level_of_hiker__wrapper container section_content__wrapper">
+                            <div class="level_of_hiker__text_wrapper section_content__text_wrapper">
+                                <div class="text_wrapper">
+                                    <p class="number_of_page">01</p>
+                                    <p class="first_title">get Started</p>
+                                    <p class="second_title">What level of  hiker are you?</p>
+                                    <p class="subtitle">Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker? </p>
+                                    <a href="" class="read_more ">read more <i class="fa-solid fa-arrow-right-long"></i></a>
+
+                                </div>
+
+                            </div>
+                            <div class="level_of_hiker__img_wrapper section_content__img_wrapper">
+                                <img src="src/images/levelOfHiker.png" alt="" class="img-fluid level_of_hiker__img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section picking_right_gear" id="page3">
+                        <div class="picking_right_gear__wrapper container section_content__wrapper">
+                            <div class="picking_right_gear__img_wrapper section_content__img_wrapper">
+                                <img src="src/images/hikingGear.png" alt="" class="img-fluid picking_right_gear__img">
+                            </div>
+                            <div class="picking_right_gear__text_wrapper section_content__text_wrapper">
+                                <div class="text_wrapper">
+                                    <p class="number_of_page">02</p>
+                                    <p class="first_title">Hiking Essentials</p>
+                                    <p class="second_title">Picking the right Hiking Gear!</p>
+                                    <p class="subtitle">The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have.
+                                        Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet. </p>
+                                    <a href="" class="read_more ">read more <i class="fa-solid fa-arrow-right-long"></i></a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section map_and_timing" id="page4">
+                        <div class="map_and_timing__wrapper container section_content__wrapper">
+                            <div class="map_and_timing__text_wrapper section_content__text_wrapper">
+                                <div class="text_wrapper">
+                                    <p class="number_of_page">03</p>
+                                    <p class="first_title">where you go is the key</p>
+                                    <p class="second_title">Understand Your Map & Timing</p>
+                                    <p class="subtitle">To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction.. </p>
+                                    <a href="" class="read_more ">read more <i class="fa-solid fa-arrow-right-long"></i></a>
+
+                                </div>
+
+                            </div>
+                            <div class="map_and_timing__img_wrapper section_content__img_wrapper">
+                                <img src="src/images/mapAndTiming.png" alt="" class="img-fluid map_and_timing__img">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </main>
+
+        </div>
+  
+     <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+    <script src="/src/script/pagepilling/jquery.pagepiling.min.js"></script>
+    <script>
+        $('#pagepiling').pagepiling({  
+
+            navigation: {
+            'bulletsColor': '#fff',
+            'position': 'right',
+            'tooltips': ['Start', '01', '02', '03']
+        },
+        onLeave: function(index, nextIndex, direction){
+            document.querySelector('[data-tooltip] a.active').previousSibling.classList.remove('tooltip-active');
+            setInterval(() => {
+                document.querySelector('[data-tooltip] a.active').previousSibling.classList.add('tooltip-active');
+            }, 10);
+        },
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/f12a45434c.js" crossorigin="anonymous"></script>
+</body>
+</html>
